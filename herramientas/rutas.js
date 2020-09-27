@@ -1,0 +1,1 @@
+    global.prospectos = require('../routes/prospectos');
