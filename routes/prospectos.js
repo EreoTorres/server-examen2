@@ -5,8 +5,6 @@ var prospectosModel =  require('../Models/prospectos-Model.js');
 router.post('/getProspectos',function(req, res, next) {
     prospectosModel.getProspectos(req.body.filtro).then(function(results) {
         if(results.length > 0){
-            //saveFiles()
-
             res.setHeader("Content-Type", "application/json");
             res.json({codigo: 200,resultado: results});
             res.end();    

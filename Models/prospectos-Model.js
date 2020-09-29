@@ -6,11 +6,9 @@ module.exports = {
             sql = " WHERE b.nombre = '"+filtro+"'"
         }
 
-        console.log(sql)
-
         return new Promise((resolve, reject) => {
             connectionapp.query(
-                'SELECT a.*,b.nombre as estatus '+
+                'SELECT a.*,b.nombre as estatus,b.color '+
                 'FROM prospectos a '+
                 'INNER JOIN estatus b ON a.idestatus = b.id' + sql
             ,async function (error, results, fields) {

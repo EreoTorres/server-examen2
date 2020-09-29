@@ -23,6 +23,7 @@
 
   //APP
   app.use('/prospectos', prospectos);
+  app.use('/estatus', estatus);
 
   app.use(function(req, res, next) {
     next(createError(404));
