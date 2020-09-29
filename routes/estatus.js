@@ -4,7 +4,7 @@ var estatusModel =  require('../Models/estatus-Model.js');
 
 router.post('/getEstatus',function(req, res, next) {
     estatusModel.getEstatus().then(function(results) {
-        if(results.length > 0){
+        if(results){
             res.setHeader("Content-Type", "application/json");
             res.json({codigo: 200,resultado: results});
             res.end();    

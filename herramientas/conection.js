@@ -1,7 +1,7 @@
     global.connectionapp = mysql.createConnection({
         host: 'localhost',
-        user: 'pmm',
-        password: 'Sisadmin2017',
+        user: 'root',
+        password: '',
         database: 'examen',  
         port: 3306
     });
