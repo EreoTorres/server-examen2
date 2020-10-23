@@ -2,7 +2,7 @@
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'examen',  
+        database: 'tiendalinea',  
         port: 3306
     });
   

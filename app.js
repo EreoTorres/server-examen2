@@ -16,15 +16,17 @@
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
-  //app.use(express.static(path.join(__dirname, 'public')));
-
-  app.use(bodyParser.json()); // support json encoded
-  app.use(bodyParser.urlencoded({ extended: true })); // support encoded
 
   //APP
-  app.use('/prospectos', prospectos);
-  app.use('/estatus', estatus);
+  app.use('/clientes', clientes);
+  app.use('/articulos', articulos);
+  app.use('/cupones', cupones);
+  app.use('/configuracion', configuracion);
+  app.use('/ventas', ventas);
 
+  app.set('views', path.join(__dirname, 'views'));
+  app.set('view engine', 'jade');
+  
   app.use(function(req, res, next) {
     next(createError(404));
   });
